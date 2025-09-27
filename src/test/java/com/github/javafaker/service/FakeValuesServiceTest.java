@@ -126,7 +126,8 @@ public class FakeValuesServiceTest extends AbstractFakerTest {
         // then
         assertThat(actual, is("Yo!"));
         verify(dummy).hello();
-        verifyZeroInteractions(faker);
+//        verifyZeroInteractions(faker);
+        verifyNoInteractions(faker);
     }
 
     @Test
@@ -299,7 +300,7 @@ public class FakeValuesServiceTest extends AbstractFakerTest {
 
         // then
         assertThat(actual, is("1 2"));
-        verifyZeroInteractions(faker);
+        verifyNoInteractions(faker);
     }
     @Test
     public void FakeValuesServiceWithNullLocaleTest(){
